@@ -1,0 +1,18 @@
+{
+    "test_seed": 20200428,
+    "checkpoint": "_ckpt_epoch_500_cust",
+    "eval_type": "eval_generator_sensitivity",
+    "model_seed": 20190508,
+    "data_seeds": [
+        20200325,
+        20200406,
+        20200407
+    ],
+    "exp_group": "fcvae_frey_processed/learning_experiments/5",
+    "experiment_name": "fc_mvae",
+    "method": "complete-case",
+    "batch_size": 10000,
+    "use_train_data": true,
+    "num_x_to_use": 30,
+    "num_z_val_steps": 25
+}

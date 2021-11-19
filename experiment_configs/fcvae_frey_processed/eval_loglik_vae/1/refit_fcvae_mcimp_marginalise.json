@@ -1,0 +1,15 @@
+{
+    "test_seed": 20200428,
+    "checkpoint": "last",
+    "eval_type": "eval_loglik_vae",
+    "model_seed": 20190508,
+    "data_seeds": [
+        20200325,
+        20200406,
+        20200407
+    ],
+    "exp_group": "fcvae_frey_processed/learning_experiments/1",
+    "experiment_name": "refit_fcvae_mcimp_marginalise",
+    "method": "complete-case",
+    "num_z_samples": 3000
+}

@@ -1,0 +1,22 @@
+{
+    "seed": 20190508,
+    "exp_group": "frey_faces_not_processed",
+    "experiment_name": "fa_mcmc_cdi_50p",
+    "dataset": "frey_faces_not_processed",
+    // posterior approximation method used in CDI
+    "posterior_approximation_method": "mcmc",
+    // number of mcmc samples averaged for producing imputation values
+    "num_mcmc_samples_for_imputation": 20,
+    // num_samples is how many samples CDI should use to approximate the expectation
+    "num_samples": 20,
+    "missing_fraction": 0.5,
+    // Wait imputation_delay epochs before imputing values in the dataset
+    "imputation_delay": 150,
+    "batch_size": 512,
+    "num_epochs": 1200,
+    "learning_rate": 1e-2,
+    "weight_decay_coefficient": 0.0,
+    "input_len": 560,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 43
+}

@@ -1,0 +1,10 @@
+{
+    "experiment_name": "refitallckpts_fcvae_pretrained_svar_cdi_const",
+    "exp_group": "fcvae_frey_processed/learning_experiments/1",
+    "train_config": "refit_fcvae_pretrained_svar_cdi_const.json",
+    "test_exp_group": "fcvae_frey_processed/eval_loglik_vae/1",
+    "test_config": "refit_fcvae_pretrained_svar_cdi_const.json",
+    "ckpts_to_load": ["100_cust", "250_cust", "500_cust", "750_cust", "1000_cust", "1250_cust", 
+        "1500_cust", "1750_cust", "2000_cust", "2250_cust", "2500_cust", "2750_cust", "last"],
+    "save": false
+}

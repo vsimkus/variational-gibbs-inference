@@ -1,0 +1,25 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "toy_set3_mnar/learning_experiments/3",
+    "experiment_name": "mice_imputation_test",
+    "data": {
+        "dataset": "toy_set3",
+        "num_imputed_copies": [5],
+        "pre_imputation": "true_values",
+        "total_miss": 0.5,
+        "miss_type": "MNAR",
+        "max_patterns": 50,
+        "filter_fully_missing": false,
+        "batch_size": 2048
+    },
+    "mice": {
+        "max_iter": 10,
+        "imputation_order": "random",
+        "imp_model": {
+            "n_iter": 100,
+            // Prior params: alpha1, alpha2, lambda1, lambda2
+            "hparams": [1e-6, 1e-6, 1e-6, 1e-6]
+        }
+    }
+}

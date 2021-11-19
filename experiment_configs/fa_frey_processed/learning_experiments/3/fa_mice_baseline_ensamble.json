@@ -1,0 +1,31 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fa_frey_processed/learning_experiments/3",
+    "experiment_name": "fa_mice_baseline_ensamble",
+    "data": {
+        "dataset": "fa_frey_processed",
+        "augment_complete": true,
+        "num_imputed_copies": [5],
+        "pre_imputation": "preimputed_data",
+        "preimp_data_model_name": "mice_imputation",
+        "total_miss": 0.5,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "batch_size": 512
+    },
+    "ensamble": true,
+    "method": "complete-case",
+    "fa_model": {
+        "input_dim": 560,
+        "latent_dim": 43
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 400,
+    "model_optim": {
+        "learning_rate": 1e-2,
+        "weight_decay_coeff": 0.0
+    }
+}

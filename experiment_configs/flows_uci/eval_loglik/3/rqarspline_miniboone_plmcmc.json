@@ -1,0 +1,14 @@
+{
+    "test_seed": 20200428,
+    "checkpoint": "last",
+    "eval_type": "eval_loglik",
+    "model_seed": 20190508,
+    "data_seeds": [
+        20200325,
+        20200406,
+        20200407
+    ],
+    "exp_group": "flows_uci/learning_experiments/3",
+    "experiment_name": "rqarspline_miniboone_plmcmc",
+    "method": "plmcmc"
+}

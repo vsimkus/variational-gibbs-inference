@@ -1,0 +1,6 @@
+[submodule "cdi/submodules/missing_data_provider"]
+	path = cdi/submodules/missing_data_provider
+	url = git@github.com:vsimkus/missing-data-provider.git
+[submodule "cdi/submodules/torch_reparametrised_mixture_distribution"]
+	path = cdi/submodules/torch_reparametrised_mixture_distribution
+	url = git@github.com:vsimkus/torch-reparametrised-mixture-distribution.git

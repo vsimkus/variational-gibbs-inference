@@ -1,0 +1,27 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "frey_faces_processed/fa_for_synthetic_data",
+    "experiment_name": "fa_em_complete",
+    "data": {
+        "dataset": "frey_faces_processed",
+        "num_imputed_copies": [1],
+        "total_miss": 0.0,
+        "miss_type": "MCAR",
+        "filter_fully_missing": false,
+        "pre_imputation": "true_values",
+        "batch_size": 2048
+    },
+    "em": {
+        "posterior_type": "joint"
+    },
+    "method": "expectation-maximisation",
+    "fa_model": {
+        "input_dim": 560,
+        "latent_dim": 43
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 900
+}

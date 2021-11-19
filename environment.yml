@@ -1,0 +1,28 @@
+# Create environment with `conda env create -f environment.yml`
+# Update environment with `conda env update --file environment.yml`
+
+name: cdi
+channels:
+    - pytorch
+    - conda-forge
+    - anaconda
+dependencies:
+    - python=3.8
+    - flake8
+    - pytorch=1.6
+    - torchvision=0.7
+    - cudatoolkit=10.1
+    - pip
+    - pip:
+        - pytorch-lightning==0.8.3
+        - jsonargparse[all]==2.32.2
+        - nflows==0.14
+    - matplotlib >=3.3.2
+    - scipy
+    - scikit-learn
+    - seaborn
+    - numpy
+    - notebook
+    - ipywidgets
+    - pytest
+    - pandas

@@ -1,0 +1,27 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fa_frey_trunc_processed/learning_experiments/3",
+    "experiment_name": "fa_em_complete",
+    "data": {
+        "dataset": "fa_frey_trunc_processed",
+        "num_imputed_copies": [1],
+        "total_miss": 0.0,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "pre_imputation": "true_values",
+        "batch_size": 3000
+    },
+    "em": {
+        "posterior_type": "joint"
+    },
+    "method": "expectation-maximisation",
+    "fa_model": {
+        "input_dim": 100,
+        "latent_dim": 43
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 150
+}

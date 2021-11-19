@@ -1,0 +1,15 @@
+{
+    "seed": 20190508,
+    "exp_group": "ff_gen_processed/learning_experiments/5",
+    "experiment_name": "fa_complete_data",
+    "dataset": "ff_gen_processed",
+    "imputation": "true_values",
+    "missing_fraction": 0.83333,
+    "batch_size": 512,
+    "num_epochs": 1000,
+    "learning_rate": 1e-2,
+    "weight_decay_coefficient": 0.0,
+    "input_len": 560,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 43
+}

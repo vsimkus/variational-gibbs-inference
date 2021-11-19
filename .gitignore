@@ -1,0 +1,27 @@
+# Python
+*__pycache__/
+*.pyc
+*.egg-info
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Out
+trained_models/
+imputation_stats/
+
+# Slurm
+slurm-*.out
+
+# Ignore unused EMNIST data
+data/EMNIST/processed/*_byclass.pt
+data/EMNIST/processed/*_bymerge.pt
+data/EMNIST/processed/*_digits.pt
+data/EMNIST/processed/*_letters.pt
+data/EMNIST/processed/*_mnist.pt
+
+# PyTorch Lightning
+**/lightning_logs/

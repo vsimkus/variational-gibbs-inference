@@ -1,0 +1,19 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fcvae_frey_processed/learning_experiments/1",
+    "main_experiment_name": "fc_mvae",
+    "ckpts_to_load": ["100_cust", "250_cust", "500_cust", "750_cust", "1000_cust", "1250_cust", 
+        "1500_cust", "1750_cust", "2000_cust", "2250_cust", "2500_cust", "2750_cust", "last"],
+    "experiment_name": "fc_mvae_val",
+    "save": false,
+    "method": "complete-case",
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 1000,
+    // Override model_optim args
+    "model_optim": {
+        "learning_rate": 5e-4
+    }
+}

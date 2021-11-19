@@ -1,0 +1,19 @@
+{
+    "seed": 20190508,
+    "exp_group": "toy_set/learning_experiments/5",
+    "experiment_name": "fa_mregression_baseline",
+    "dataset": "toy_set",
+    "imputation": "regression_prediction",
+    "missingness": 5,
+    "missingness_type": "per_example",
+    "batch_size": 2048,
+    "num_epochs": 400,
+    "learning_rate": 1e-1,
+    "weight_decay_coefficient": 0.0,
+    "input_len": 6,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 2,
+    "regression_models": {
+        "config": "experiment_configs/toy_set/learning_experiments/5/mean_mregression_fn.json"
+    }
+}

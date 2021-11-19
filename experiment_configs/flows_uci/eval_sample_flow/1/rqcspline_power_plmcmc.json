@@ -1,0 +1,15 @@
+{
+    "test_seed": 20200428,
+    "checkpoint": "last",
+    "eval_type": "eval_sample_flow",
+    "model_seed": 20190508,
+    "data_seeds": [
+        20200325,
+        20200406,
+        20200407
+    ],
+    "exp_group": "flows_uci/learning_experiments/1",
+    "experiment_name": "rqcspline_power_plmcmc",
+    "method": "plmcmc",
+    "num_samples": 200000
+}

@@ -1,0 +1,24 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "toy_set3/learning_experiments/1",
+    "experiment_name": "mice_imputation_mi5",
+    "data": {
+        "dataset": "toy_set3",
+        "num_imputed_copies": [5],
+        "pre_imputation": "true_values",
+        "total_miss": 0.1667,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "batch_size": 2048
+    },
+    "mice": {
+        "max_iter": 50,
+        "imputation_order": "random",
+        "imp_model": {
+            "n_iter": 100,
+            // Prior params: alpha1, alpha2, lambda1, lambda2
+            "hparams": [1e-6, 1e-6, 1e-6, 1e-6]
+        }
+    }
+}

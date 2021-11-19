@@ -1,0 +1,20 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fcvae_frey_processed/learning_experiments/5",
+    "main_experiment_name": "fc_miwae_lrelu",
+    // "ckpts_to_load": ["100_cust", "250_cust", "500_cust", "750_cust", "1000_cust", "1250_cust", 
+    //     "1500_cust", "1750_cust", "2000_cust", "2250_cust", "2500_cust", "2750_cust", "3000_cust", 
+    //     "3250_cust", "3500_cust", "3750_cust", "4000_cust", "4250_cust", "4500_cust", "4750_cust", "last"],
+    "ckpts_to_load": ["100_cust", "500_cust", "1000_cust",
+        "1500_cust", "2000_cust", "2500_cust", "3000_cust", 
+        "3500_cust", "4000_cust", "4500_cust", "5000_cust"],
+    "experiment_name": "fc_miwae_lrelu_val_resetenc",
+    "save": false,
+    "reset_encoder": true,
+    "method": "complete-case",
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 1000
+}

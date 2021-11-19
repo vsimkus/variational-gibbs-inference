@@ -1,0 +1,10 @@
+{
+    "experiment_name": "impute_10",
+    "exp_group": "ff_gen_processed",
+    "method": "fa_svariational_cdi",
+    "dataset": "ff_gen_processed",
+    "K": 10,
+    "imputations": 20,
+    "switch_imputations": 5,
+    "epochs": ["latest", "latest", "latest", "latest", "latest"]
+}

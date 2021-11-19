@@ -1,0 +1,12 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "experiment_name": "rqcspline_miniboone_plmcmc",
+    "exp_group": "flows_uci/learning_experiments/5",
+    "test_exp_group": "flows_uci/eval_loglik/5",
+    "test_config": "rqcspline_miniboone_plmcmc.json",
+    "ckpts_to_load": ["10_cust", "50_cust", "100_cust", "150_cust", "200_cust", "250_cust", "300_cust", "350_cust", "400_cust", 
+                      "450_cust", "500_cust", "550_cust", "600_cust", "650_cust", "700_cust", "750_cust", "800_cust", "850_cust", 
+                      "900_cust", "950_cust", "1000_cust", "1050_cust", "1100_cust", "1150_cust", "1200_cust", "1250_cust", "1300_cust", 
+                      "1350_cust", "1400_cust", "1450_cust", "1500_cust", "1550_cust", "1600_cust", "1650_cust", "1700_cust", "last"]
+}

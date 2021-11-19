@@ -1,0 +1,27 @@
+{
+    "test_seed": 20200428,
+    "checkpoint": "best",
+    "eval_type": "eval_gibbs_sampling2",
+    "model_seed": 20190508,
+    "data_seeds": [
+        20200325,
+        20200406,
+        20200407
+    ],
+    "exp_group": "fcvae_frey_processed/learning_experiments/1",
+    "experiment_name": "fcvae_pretrained_svar_cdi",
+    "method": "variational",
+
+    "num_imputed_copies": 10,
+    "batch_size": 128,
+    "init_missing_data": true,
+    "num_gibbs_steps": 5000,
+
+    "job_id": 3,
+    "data": {
+        "miss_type": "block-inverse",
+        "width": 20,
+        "top_left": [0, 0],
+        "bottom_right": [10, 14]
+    }
+}

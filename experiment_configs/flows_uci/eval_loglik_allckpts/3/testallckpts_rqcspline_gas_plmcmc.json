@@ -1,0 +1,11 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "experiment_name": "rqcspline_gas_plmcmc",
+    "exp_group": "flows_uci/learning_experiments/3",
+    "test_exp_group": "flows_uci/eval_loglik/3",
+    "test_config": "rqcspline_gas_plmcmc.json",
+    "ckpts_to_load": ["2_cust", "24_cust", "36_cust", "48_cust", "60_cust", "72_cust", "84_cust", "96_cust", "108_cust", 
+                      "120_cust", "132_cust", "144_cust", "156_cust", "168_cust", "180_cust", "192_cust", "204_cust", 
+                      "216_cust", "228_cust", "last"]
+}

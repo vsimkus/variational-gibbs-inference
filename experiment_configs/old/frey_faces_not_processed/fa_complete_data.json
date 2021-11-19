@@ -1,0 +1,15 @@
+{
+    "seed": 20190508,
+    "exp_group": "frey_faces_not_processed",
+    "experiment_name": "fa_complete_data",
+    "dataset": "frey_faces_not_processed",
+    "imputation": "true_values",
+    "missing_fraction": 0.3,
+    "batch_size": 512,
+    "num_epochs": 400,
+    "learning_rate": 1e-2,
+    "weight_decay_coefficient": 0.0,
+    "input_len": 560,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 43
+}

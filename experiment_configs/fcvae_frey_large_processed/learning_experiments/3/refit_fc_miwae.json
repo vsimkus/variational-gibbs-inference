@@ -1,0 +1,40 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "test": {
+        "test_seed": 20200428
+    },
+    "exp_group": "fcvae_frey_large_processed/learning_experiments/3",
+    "experiment_name": "refit_fc_miwae",
+    "model_name": "fc_miwae",
+    "model_checkpoint": "last",
+    "trainer": "complete",
+    "data": {
+        "dataset": "fcvae_frey_large_processed",
+        "num_imputed_copies": [1],
+        "total_miss": 0.0,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "pre_imputation": "true_values",
+        "obs_zero_mean": true,
+        "batch_size": 128
+    },
+    "method": "refit-encoder-on-test",
+    "density_model": "fc-vae",
+    "fc_vae_model": {
+        "bound": "miwae",
+        "num_z_samples": 1,
+        "input_dim": 560,
+        "encoder_hidden_dims": [200, 10],
+        "decoder_hidden_dims": [10, 200],
+        "activation": "sigmoid"
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 400,
+    "model_optim": {
+        "learning_rate": 1e-3,
+        "weight_decay_coeff": 0.0
+    }
+}

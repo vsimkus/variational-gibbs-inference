@@ -1,0 +1,10 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "experiment_name": "rqcspline_hepmass_plmcmc",
+    "exp_group": "flows_uci/learning_experiments/1",
+    "test_exp_group": "flows_uci/eval_loglik/1",
+    "test_config": "rqcspline_hepmass_plmcmc.json",
+    "ckpts_to_load": ["5_cust", "20_cust", "40_cust", "60_cust", "80_cust", "90_cust", "110_cust", "130_cust", "150_cust", 
+                      "170_cust", "190_cust", "220_cust", "240_cust", "260_cust", "280_cust", "300_cust", "320_cust", "last"]
+}

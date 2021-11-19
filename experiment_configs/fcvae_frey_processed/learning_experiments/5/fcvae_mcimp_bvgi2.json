@@ -1,0 +1,49 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fcvae_frey_processed/learning_experiments/5",
+    "experiment_name": "fcvae_mcimp_bvgi2",
+    "save_custom_epochs": [100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3250, 3500, 3750, 4000, 4250, 4500, 4750],
+    "data": {
+        "dataset": "fcvae_frey_processed",
+        "num_imputed_copies": [5],
+        "total_miss": 0.8333,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "pre_imputation": "empirical_distribution_samples",
+        "obs_zero_mean": true,
+        "batch_size": 128
+    },
+    "cdi": {
+        "debug": {
+            "eval_incomplete": true
+        },
+        // Wait number of epochs before imputing values in the dataset
+        "imputation_delay": 20,
+        // Number of imputation steps in each epoch
+        "num_imp_steps_schedule": [0],
+        "num_imp_steps_schedule_values": [5],
+        "concat_latents": true,
+        "latent_dim": 10
+    },
+    // posterior approximation method used in CDI
+    "method": "mcimp",
+    "density_model": "fc-mcvae-bvgi2",
+    "fc_vae_model": {
+        "num_z_samples": 1,
+        "input_dim": 560,
+        "encoder_hidden_dims": [200, 10],
+        "decoder_hidden_dims": [10, 200],
+        "activation": "sigmoid"
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 5000,
+    // Effective batch size is data.batch_size x accumulate_grad_batches
+    "accumulate_grad_batches": 1,
+    "model_optim": {
+        "learning_rate": 1e-3,
+        "weight_decay_coeff": 0.0
+    }
+}

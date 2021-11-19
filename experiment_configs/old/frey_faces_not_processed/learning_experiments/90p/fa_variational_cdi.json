@@ -1,0 +1,24 @@
+{
+    "seed": 20190508,
+    "exp_group": "frey_faces_not_processed",
+    "experiment_name": "fa_variational_cdi_90p",
+    "dataset": "frey_faces_not_processed",
+    // posterior approximation method used in CDI
+    "posterior_approximation_method": "variational",
+    // num_samples is how many samples CDI should use to approximate the expectation
+    "num_samples": 20,
+    "missing_fraction": 0.9,
+    // Wait imputation_delay epochs before imputing values in the dataset
+    "imputation_delay": 200,
+    "batch_size": 512,
+    "num_epochs": 1200,
+    "model_learning_rate": 1e-2,
+    "var_learning_rate": 1e-5,
+    "model_weight_decay_coefficient": 0.0,
+    "var_weight_decay_coefficient": 0.0,
+    "input_len": 560,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 43,
+    // hidden layer dimension of the variational model
+    "hidden_layer_dim": 100
+}

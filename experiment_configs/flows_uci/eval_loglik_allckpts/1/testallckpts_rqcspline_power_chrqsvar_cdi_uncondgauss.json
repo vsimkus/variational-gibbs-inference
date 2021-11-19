@@ -1,0 +1,10 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "experiment_name": "rqcspline_power_chrqsvar_cdi_uncondgauss",
+    "exp_group": "flows_uci/learning_experiments/1",
+    "test_exp_group": "flows_uci/eval_loglik/1",
+    "test_config": "rqcspline_power_chrqsvar_cdi_uncondgauss.json",
+    "ckpts_to_load": ["2_cust", "10_cust", "20_cust", "30_cust", "40_cust", "50_cust", "60_cust", "70_cust", "80_cust", "90_cust", 
+                      "100_cust", "110_cust", "120_cust", "last"]
+}

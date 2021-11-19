@@ -1,0 +1,103 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "flows_uci/learning_experiments/1",
+    "experiment_name": "rqcspline_miniboone_chrqsvar_cdi_uncondgauss",
+    "save_custom_epochs": [10, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850],
+    "data": {
+        "dataset": "uci_miniboone",
+        "num_imputed_copies": [5],
+        "total_miss": 0.1667,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "pre_imputation": "empirical_distribution_samples",
+        "batch_size": 128
+    },
+    "cdi": {
+        // ----------- Update --------------
+        // Update ALL components or MISSING components
+        "update_components": "MISSING",
+        // Component fraction schedule
+        "update_comp_schedule": [0, 10],
+        "update_comp_schedule_values": [0, -1],
+        // num_samples is how many samples CDI should use to approximate the univariate expectation
+        "num_samples": 1,
+        "entropy_coeff": 1.0,
+        // --------- Imputation ------------
+        // Whether to impute the dataset with a posterior sample or mean
+        "sample_imputation": true,
+        "imp_acceptance_check_schedule": [0],
+        "imp_acceptance_check_schedule_values": [false],
+        // Wait number of epochs before imputing values in the dataset
+        // "imputation_delay": 15,
+        "imputation_delay": 10,
+        // Number of imputation steps in each epoch
+        "num_imp_steps_schedule": [0],
+        "num_imp_steps_schedule_values": [5],
+        // Fraction of missing components per example, -1 corresponds to exactly 1 of the missing components
+        "imputation_comp_schedule": [0],
+        "imputation_comp_schedule_values": [-1]
+    },
+    // posterior approximation method used in CDI
+    "method": "variational",
+    // Variational model used - individual per distribution or partially shared
+    "variational_model": "rq-flow",
+    "var_pretrained_model": "miniboone_chrqsvar_pretraining_uncondgauss",
+    "var_model": {
+        "base_distribution": "gaussian",
+
+        "activation": "lrelu",
+        "input_dim": 43,
+        "encoder_hidden_features": 256,
+        "encoder_num_blocks": 1,
+        "context_intermediate_features": 128,
+
+        "hidden_features": 32,
+        "num_transform_blocks": 2,
+        "num_flow_steps": 3,
+        "tail_bound": 3,
+        "num_bins": 4,
+
+        "dropout_probability": 0.0,
+        "use_batch_norm": false,
+
+        "network": "channel-resnet",
+        // Change masking
+        "mask_inputs": false,
+        "reduce_mem": false
+    },
+    "density_model": "flow",
+    "flow": {
+        "dim": 43,
+        "base_transform_type": "rq-coupling",
+        "linear_transform_type": "lu",
+        "num_flow_steps": 10,
+        "hidden_features": 32,
+        "tail_bound": 3,
+        "num_bins": 4,
+        "num_transform_blocks": 1,
+        "use_batch_norm": false,
+        "dropout_probability": 0.2,
+        "apply_unconditional_transform": true
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 866,
+    // Effective batch size is data.batch_size x accumulate_grad_batches
+    "accumulate_grad_batches": 1,
+    "model_optim": {
+        "optimiser": "adam",
+        "learning_rate": 3e-4,
+        "weight_decay_coeff": 0.0,
+        "anneal_learning_rate": true,
+        "anneal_steps": 866
+    },
+    "var_optim": {
+        "optimiser": "amsgrad",
+        "learning_rate": 3e-4,
+        "weight_decay_coeff": 0.0,
+        "anneal_learning_rate": true,
+        "anneal_steps": 866
+    }
+}

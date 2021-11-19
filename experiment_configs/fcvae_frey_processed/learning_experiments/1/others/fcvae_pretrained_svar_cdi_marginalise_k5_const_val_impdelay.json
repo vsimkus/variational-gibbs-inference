@@ -1,0 +1,21 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fcvae_frey_processed/learning_experiments/1",
+    "main_experiment_name": "fcvae_pretrained_svar_cdi_marginalise_k5_const",
+    "ckpts_to_load": ["100_cust", "250_cust", "500_cust", "750_cust", "1000_cust", "1250_cust", 
+        "1500_cust", "1750_cust", "2000_cust", "2250_cust", "2500_cust", "2750_cust", "last"],
+    "experiment_name": "fcvae_pretrained_svar_cdi_marginalise_k5_const_val_impdelay",
+    "save": false,
+    "method": "variational",
+    // Override CDI args
+    "cdi": {
+        "update_comp_schedule": [0],
+        "update_comp_schedule_values": [0.1],
+        "imputation_delay": 100
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 600
+}

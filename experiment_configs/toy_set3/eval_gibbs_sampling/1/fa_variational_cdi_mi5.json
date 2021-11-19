@@ -1,0 +1,21 @@
+{
+    "test_seed": 20200428,
+    "checkpoint": "latest",
+    "eval_type": "eval_gibbs_sampling",
+    "model_seed": 20190508,
+    "data_seeds": [
+        20200325,
+        20200406,
+        20200407
+    ],
+    "exp_group": "toy_set3/learning_experiments/1",
+    "experiment_name": "fa_variational_cdi_mi5",
+    "method": "variational",
+    "num_gibbs_passes": 5,
+    "num_gibbs_chains": 1000,
+    "sample_idx": [
+        221,
+        2168
+    ],
+    "init_missing_data": true
+}

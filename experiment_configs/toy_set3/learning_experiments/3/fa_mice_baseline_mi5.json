@@ -1,0 +1,29 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "toy_set3/learning_experiments/3",
+    "experiment_name": "fa_mice_baseline_mi5",
+    "data": {
+        "dataset": "toy_set3",
+        "num_imputed_copies": [5],
+        "pre_imputation": "preimputed_data",
+        "preimp_data_model_name": "mice_imputation_mi5",
+        "total_miss": 0.5,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "batch_size": 2048
+    },
+    "method": "complete-case",
+    "fa_model": {
+        "input_dim": 6,
+        "latent_dim": 2
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 400,
+    "model_optim": {
+        "learning_rate": 5e-1,
+        "weight_decay_coeff": 0.0
+    }
+}

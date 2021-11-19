@@ -1,0 +1,34 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fa_frey_processed/learning_experiments/5",
+    "experiment_name": "fa_mcem_joint",
+    "data": {
+        "dataset": "fa_frey_processed",
+        "num_imputed_copies": [1],
+        "total_miss": 0.8333,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "pre_imputation": "mean",
+        "batch_size": 256
+    },
+    "mcem": {
+        "posterior_type": "joint",
+        "num_samples": 5
+    },
+    "method": "mc-expectation-maximisation",
+    "fa_model": {
+        "input_dim": 560,
+        "latent_dim": 43
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 800,
+    // Effective batch size is data.batch_size x accumulate_grad_batches
+    "accumulate_grad_batches": 2,
+    "model_optim": {
+        "learning_rate": 1e-2,
+        "weight_decay_coeff": 0.0
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "seed": 20190508,
+    "exp_group": "toy_set2_mcar/learning_experiments/2",
+    "experiment_name": "fa_complete_data",
+    "dataset": "toy_set2",
+    "imputation": "true_values",
+    "missingness": 0.3333,
+    "missingness_type": "dataset_ratio",
+    "batch_size": 2048,
+    "num_epochs": 400,
+    "learning_rate": 1e-1,
+    "weight_decay_coefficient": 0.0,
+    "input_len": 6,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 2
+}

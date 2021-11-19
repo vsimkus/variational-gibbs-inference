@@ -1,0 +1,24 @@
+{
+    "seed": 20190508,
+    "exp_group": "toy_set/learning_experiments/2",
+    "experiment_name": "fa_exact_posterior_cdi",
+    "dataset": "toy_set",
+    "imputation": "mean",
+    // Sample all missing variables or 1 at a time
+    "sample_all": true,
+    // posterior approximation method used in CDI
+    "posterior_approximation_method": "exact",
+    // num_samples is how many samples CDI should use to approximate the expectation
+    "num_samples": 5,
+    "missingness": 2,
+    "missingness_type": "per_example",
+    // Wait imputation_delay epochs before imputing values in the dataset
+    "imputation_delay": 0,
+    "batch_size": 2048,
+    "num_epochs": 400,
+    "learning_rate": 1e-1,
+    "weight_decay_coefficient": 0.0,
+    "input_len": 6,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 2
+}

@@ -1,0 +1,34 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "toy_set3/learning_experiments/4",
+    "experiment_name": "svar_pretraining",
+    "data": {
+        "dataset": "toy_set3",
+        "num_imputed_copies": [5],
+        "total_miss": 0.6667,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "pre_imputation": "empirical_distribution_samples",
+        "batch_size": 2048
+    },
+    "method": "var-pretraining",
+    // Variational model used - individual per distribution or partially shared
+    "variational_model": "shared",
+    "var_model": {
+        "activation": "lrelu",
+        "input_missing_vectors": false,
+        "input_dim": 6,
+        "body_hidden_dims": [20, 20],
+        "head_hidden_dims": [6]
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 100,
+    "optim": {
+        "optimiser": "amsgrad",
+        "learning_rate": 1e-1, 
+        "weight_decay_coeff": 0.0
+    }
+}

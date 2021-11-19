@@ -1,0 +1,29 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "fcvae_frey_processed/learning_experiments/5",
+    "main_experiment_name": "fcvae_pretrained_fsvar_cdi_const",
+    "ckpts_to_load": ["100_cust", "250_cust", "500_cust", "750_cust", "1000_cust", "1250_cust", 
+        "1500_cust", "1750_cust", "2000_cust", "2250_cust", "2500_cust", "2750_cust", "3000_cust", 
+        "3250_cust", "3500_cust", "3750_cust", "4000_cust", "4250_cust", "4500_cust", "4750_cust", "5000_cust", 
+        "5250_cust", "5500_cust", "5750_cust", "6000_cust", "6250_cust", "6500_cust", "6750_cust", 
+        "last"],
+    "experiment_name": "fcvae_pretrained_fsvar_cdi_const_val_preimpgibbsrej",
+    "save": false,
+    "method": "variational",
+    // Override data args
+    "data": {
+        "pre_imputation": "systematic_gibbs_sampling",
+        "pre_imp_num_imputation_steps": 1500,
+        "pre_imp_reject": true
+    },
+    // Override CDI args
+    "cdi": {
+        "update_comp_schedule": [0],
+        "update_comp_schedule_values": [0.0200048]
+    },
+    //
+    // Trainer parameters
+    //
+    "max_epochs": 500
+}

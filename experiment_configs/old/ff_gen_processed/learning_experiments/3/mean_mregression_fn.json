@@ -1,0 +1,24 @@
+{
+    "seed": 20190508,
+    "exp_group": "ff_gen_processed/learning_experiments/3",
+    "experiment_name": "mean_mregression_fn",
+    "dataset": "ff_gen_processed",
+    "imputation": "mean",
+    "input_missing_vectors": true,
+    "missing_fraction": 0.5,
+    "batch_size": 512,
+    "num_epochs": 800,
+    // the number of epochs to continue if not validation improvement before early stopping
+    "early_stop_epoch_thresh": 50,
+    "learning_rate": 1e-3,
+    "weight_decay_coefficient": 0.0,
+    // number of regression models
+    "num_regression_fns": 560,
+    "model_arch": {
+        // input length for the regression model
+        "input_len": 1118,
+        // dimensionality of the hidden layer
+        "hidden_layer_dims": [100],
+        "activation": "lrelu"
+    }
+}

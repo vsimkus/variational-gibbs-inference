@@ -1,0 +1,41 @@
+{
+    "seed": 20190508,
+    "exp_group": "ff_gen_processed/learning_experiments/1",
+    "experiment_name": "fa_s3variational_cdi",
+    "dataset": "ff_gen_processed",
+    "imputation": "mean",
+    "input_missing_vectors": "selected_missing",
+    // Whether to set the missing variable to zero before passing to the shared network
+    "set_missing_zero": true,
+    // Whether to impute the dataset with a posterior sample or mean
+    "sample_imputation": true,
+    // Sample all missing variables or 1 at a time
+    "sample_all": true,
+    // When to switch ELBO from sample_all
+    "switch_sampling_epoch": 999999999999,
+    // When to switch imputation from sample_all
+    "switch_imputation_epoch": 999999999999,
+    // posterior approximation method used in CDI
+    "posterior_approximation_method": "variational",
+    // Variational model used - individual per distribution or partially shared
+    "variational_model": "shared3",
+    "activation": "lrelu",
+    // num_samples is how many samples CDI should use to approximate the expectation
+    "num_samples": 1,
+    "missing_fraction": 0.16667,
+    // Wait imputation_delay epochs before imputing values in the dataset
+    "imputation_delay": 0,
+    "batch_size": 512,
+    "num_epochs": 1000,
+    "entropy_coeff": 1.0,
+    "model_learning_rate": 1e-2,
+    "var_learning_rate": 1e-3,
+    "model_weight_decay_coefficient": 0.0,
+    "var_weight_decay_coefficient": 0.0,
+    "input_len": 560,
+    // latent dimension of the Factor Analysis model
+    "latent_dim": 43,
+    // hidden layer dimensions of the variational model
+    "prenet_layer_dims": [200],
+    "outnet_layer_dims": [200]
+}

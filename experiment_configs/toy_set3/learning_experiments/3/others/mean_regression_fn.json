@@ -1,0 +1,27 @@
+{
+    "model_seed": 20190508,
+    "data_seeds": [20200325, 20200406, 20200407],
+    "exp_group": "toy_set3/learning_experiments/3",
+    "experiment_name": "mean_regression_fn",
+    "data": {
+        "dataset": "toy_set3",
+        "num_imputed_copies": [1],
+        "total_miss": 0.5,
+        "miss_type": "MCAR",
+        "filter_fully_missing": true,
+        "pre_imputation": "mean",
+        "batch_size": 2048
+    },
+    "input_missing_vectors": false,
+    "num_regression_fns": 6,
+    "reg_model": {
+        "input_dim": 5,
+        "hidden_layer_dims": [3],
+        "activation": "lrelu"
+    },
+    "max_epochs": 1200,
+    // the number of epochs to continue if not validation improvement before early stopping
+    "early_stop_epoch_thresh": 100,
+    "learning_rate": 1e-2,
+    "weight_decay_coefficient": 0.0
+}
