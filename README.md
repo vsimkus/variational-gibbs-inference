@@ -4,7 +4,7 @@ This repository contains the research code for
 
 > Simkus, V., Rhodes, B., Gutmann, M. U., 2021. Variational Gibbs inference for statistical model estimation from incomplete data.
 
-The code is shared for reproducibility purposes and is not intended for production use. It should also serve as a base for anyone wanting to use VGI for model estimation from incomplete data.
+The code is shared for reproducibility purposes and is not intended for production use. It should also serve as a reference implementation for anyone wanting to use VGI for model estimation from incomplete data.
 
 ## Abstract
 
@@ -12,15 +12,15 @@ Statistical models are central to machine learning with broad applicability acro
 
 ## VGI demo
 
-We invite the readers of the paper to also see the Jupyter [notebook](./notebooks/VGI_demo.ipynb), where we demo VGI on two statistical models and animate the learning process.
+We invite the readers of the paper to also see the Jupyter [notebook](https://nbviewer.org/github/vsimkus/variational-gibbs-inference/blob/main/notebooks/VGI_demo.ipynb), where we demonstrate VGI on two statistical models and animate the learning process to help better understand the method.
 
 Below is an animation from the notebook of a Gaussian Mixture Model fitted from incomplete data using the VGI algorithm (left), and the variational Gibbs conditional approximations (right) throughout iterations.
 
-TODO
+<https://user-images.githubusercontent.com/5730052/142662708-5554b1e6-1d62-4848-a5bd-ab0000e6adcd.mp4>
 
 ## Dependencies
 
-Install python dependencies from conda and the project package with
+Install python dependencies from conda and the `cdi` project package with
 
 ```bash
 conda env create -f environment.yml
@@ -45,25 +45,25 @@ All data used in the paper are stored in [`data`](./data/) directory and the cor
 The main code to the various methods used in the paper can be found in [`cdi/trainers`](./cdi/trainers/) directory.
 
 * [`trainer_base.py`](./cdi/trainers/trainer_base.py) implements the main data loading and preprocessing code.
-* [`variational_cdi.py`](./cdi/trainers/variational_cdi.py) implements the key code for variational Gibbs inference (VGI).
+* [`variational_cdi.py`](./cdi/trainers/variational_cdi.py) and [`cdi.py`](./cdi/trainers/cdi.py) implement the key code for variational Gibbs inference (VGI).
 * [`mcimp.py`](./cdi/trainers/mcimp.py) implements the code for variational block-Gibbs inference (VBGI) used in the VAE experiments.
-* The other scripts in [`cdi/trainers`](./cdi/trainers/) implement the reference code and variational conditional pre-training code.
+* The other scripts in [`cdi/trainers`](./cdi/trainers/) implement the comparison methods and variational conditional pre-training.
 
 ### Statistical models
 
-The code for the statistical and the variational models are located in [`cdi/models`](./cdi/models/).
+The code for the statistical (factor analysis, VAEs, and flows) and the variational models are located in [`cdi/models`](./cdi/models/).
 
 ### Configurations
 
-The [`experiment_configs`](./experiment_configs/) directory contains the configuration files for all experiments. The config files are in json format. They are passed to the main running script as a command-line argument and values in them can be overriden with additional command-line arguments.
+The [`experiment_configs`](./experiment_configs/) directory contains the configuration files for all experiments. The config files include all the hyperparameter settings necessary to reproduce our results. The config files are in a json format. They are passed to the main running script as a command-line argument and values in them can be overriden with additional command-line arguments.
 
 ### Run scripts
 
-[`train.py`](./train.py) is the main code we use to run the experiments, and [`test.py`](./test.py) is the main script to produce analysis results used in the text.
+[`train.py`](./train.py) is the main code we use to run the experiments, and [`test.py`](./test.py) is the main script to produce analysis results presented in the paper.
 
 ### Analysis code
 
-The Jupyter notebooks in [`notebooks`](./notebooks/) directory contain the code which was used to analysis the method and produce figures in the text.
+The Jupyter notebooks in [`notebooks`](./notebooks/) directory contain the code which was used to analysis the method and produce figures in the paper.
 
 ## Running the code
 
@@ -81,7 +81,7 @@ To train a model use the `train.py` script, for example, to fit a rational-quadr
 python train.py --config=experiment_configs/flows_uci/learning_experiments/3/rqcspline_miniboone_chrqsvar_cdi_uncondgauss.json
 ```
 
-Any parameters set in the yaml file can be overriden by passing additionals command-line arguments, e.g.
+Any parameters set in the config file can be overriden by passing additionals command-line arguments, e.g.
 
 ```bash
 python train.py --config=experiment_configs/flows_uci/learning_experiments/3/rqcspline_miniboone_chrqsvar_cdi_uncondgauss.json --data.total_miss=0.33
