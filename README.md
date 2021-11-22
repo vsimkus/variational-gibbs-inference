@@ -53,7 +53,7 @@ The main code to the various methods used in the paper can be found in [`cdi/tra
 
 The code for the statistical (factor analysis, VAEs, and flows) and the variational models are located in [`cdi/models`](./cdi/models/).
 
-### Configurations
+### Configuration files
 
 The [`experiment_configs`](./experiment_configs/) directory contains the configuration files for all experiments. The config files include all the hyperparameter settings necessary to reproduce our results. The config files are in a json format. They are passed to the main running script as a command-line argument and values in them can be overriden with additional command-line arguments.
 
@@ -63,7 +63,7 @@ The [`experiment_configs`](./experiment_configs/) directory contains the configu
 
 ### Analysis code
 
-The Jupyter notebooks in [`notebooks`](./notebooks/) directory contain the code which was used to analysis the method and produce figures in the paper.
+The Jupyter notebooks in [`notebooks`](./notebooks/) directory contain the code which was used to analysis the method and produce figures in the paper. You should also be able to use these notebooks to find the corresponding names of the config files for the experiments in the paper.
 
 ## Running the code
 
