@@ -106,3 +106,7 @@ python test.py --test_config=experiment_configs/flows_uci/eval_loglik/3/rqcsplin
 This will store all results in a file that we then analyse in the provided notebook.
 
 For the VAE evaluation, where variational distribution fine-tuning is required for test log-likelihood evaluation use [`retrain_all_ckpts_on_test_and_run_test.py`](./retrain_all_ckpts_on_test_and_run_test.py).
+
+## Using this codebase on your own task
+
+While the main purpose of this repository is reproducibility of the research paper and a demonstration of the method, you should be able to adapt the code to fit your statistical models. We would advise you to first see the Jupyter notebook [demo](https://nbviewer.org/github/vsimkus/variational-gibbs-inference/blob/main/notebooks/VGI_demo.ipynb). The notebook provides an example of how to implement the target statistical model as well as the variational model of the conditionals, you can find further examples in [cdi/models](./cdi/models) directory. If you intend to use a variational family that is different to ours you will also need to implement the corresponding sampling functions [here](./cdi/trainers/variational_cdi.py#L479-L605).
