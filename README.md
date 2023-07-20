@@ -16,7 +16,7 @@ We invite the readers of the paper to also see the Jupyter [notebook](https://nb
 
 Below is an animation from the notebook of a Gaussian Mixture Model fitted from incomplete data using the VGI algorithm (left), and the variational Gibbs conditional approximations (right) throughout iterations.
 
-<https://user-images.githubusercontent.com/5730052/142662708-5554b1e6-1d62-4848-a5bd-ab0000e6adcd.mp4>
+<https://github.com/vsimkus/variational-gibbs-inference/assets/5730052/2e1c2b37-70f3-4885-982d-db140543236f>
 
 ## Dependencies
 
