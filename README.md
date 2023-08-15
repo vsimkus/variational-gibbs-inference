@@ -1,8 +1,10 @@
-# Variational Gibbs inference (VGI)
+# Variational Gibbs Inference (VGI)
 
 This repository contains the research code for
 
-> Simkus, V., Rhodes, B., Gutmann, M. U., 2021. Variational Gibbs inference for statistical model estimation from incomplete data.
+> Vaidotas Simkus, Benjamin Rhodes, Michael U. Gutmann. Variational Gibbs Inference for Statistical Model Estimation from Incomplete Data. Journal of Machine Learning Research, 2023.
+
+The paper can be found here: <https://jmlr.org/papers/v24/21-1373.html>.
 
 The code is shared for reproducibility purposes and is not intended for production use. It should also serve as a reference implementation for anyone wanting to use VGI for model estimation from incomplete data.
 
